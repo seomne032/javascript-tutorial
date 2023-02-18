@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            문제1) 
+            나이를 입력 받고,
+            입력 받은 나이가 65세 이상이면 50%할인,
+            입력 받은 나이가 7세 이하면 무료입장,
+            입력 받은 나이가 13세 이하면 30%할인,
+            그 외 정상요금
+        */
+        // let age = prompt("몇 살 이세용");
+        // if (age <= 7 && age >12) {
+        //     alert('애기네요, 무료입장하세요!');
+        // } else if (age <= 13 && age > 8) {
+        //     alert('학생이네요, 30%할인!');
+        // } else if (age >= 65) {
+        //     alert('어른이네요, 50%할인!');
+        // } else {
+        //     alert('할인이 없어요, 정상요금내세요!');
+        // }
+
+        /*
+            문제2)
+            confirm(정말삭제?);
+            예 -> 비밀번호를 입력해주세요(prompt)
+               -> 비밀번호가 1234면 -> 삭제되었습니다
+            아니오 -> 삭제가 취소되었습니다.
+        */
+        // let userConfirm = confirm('정말 삭제하시겠습니까?');
+        // if (userConfirm === true) {
+        //     let userInput = prompt("비밀번호를 입력해주세요.");
+        //     if(userInput === "1234") {
+        //         alert("삭제되었습니다.");
+        //     } else {
+        //         alert("비밀번호를 확인해주세요.");
+        //     }
+        // } else { //false
+        //     alert("삭제가 취소되었습니다..");
+        // }
+
+        /*
+            문제3)
+            1. 키와 몸무게를 입력받고,
+            2. 입력받은 키를 토대로 표준체중을 산정한 다음,
+               (* 표준체중 = 키에서 100을 뺀 값에 0.9 곱)
+            3. 입력받은 몸무게가 표준체중의 20%를 초과하면 "과체중입니다"
+            4. 입력받은 몸무게가 표준체중의 20% 미만이라면 "저체중입니다"
+            5. 입력받은 몸무게가 표준체중의 10% 미만이라면 "미용체중입니다"
+            6. 그 외, 정상체중입니다.
+        */
+        let userHeight = prompt("키를 입력해주세요");
+        let userWeight = prompt("몸무게를 입력해주세요");
+        //console.log(userHeight, userWeight);
+        let standerad = (userHeight - 100) * 0.9;
+
+        if (userWeight > standerad * 1.2) {
+            alert("과체중입니다");
+        } else if(userWeight < standerad * 0.8) {
+            alert("저체중입니다");
+        } else if(userWeight < standerad * 0.1) {
+            alert("미용체중입니다");
+        } else {
+            alert("정상체중입니다");
+        }
+    </script>
+</body>
+</html>

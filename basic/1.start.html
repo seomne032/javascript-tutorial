@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <script>
+        var a = 123; //변수를 선언했다! (a라는 변수에 123 을 저장했당)
+        // 변수 : 데이터를 저장하는 공간(변할 수 있음!)
+        // var : 변수를 선언하는 키워드
+        // a : 변수의 이름(labeling 내가 지어주는 이름)
+        // = : 저장하다, 할당하다(a는 123이다 라는 의미가 아님!)
+        // 123 : 실질적인 데이터
+        // ; : 명령을 마침
+
+        // 변수 이름 작성 방법(이건 꼭 지키자!)
+        // 1. 숫자로 시작 금지
+        // 2. 띄어쓰기 안됨
+        // 3. 특수문자는 $, _ 이 두개만 사용 가능(그 외 사용 불가)
+        // 4. 대소문자를 구별함(my_name과 My_name은 다른 이름이다)
+        // 5. '예약어' 사용 금지
+        // 6. 변수는 직관적인 이름 사용(문장에 가까운 작명, 이름을 보고 데이터를 유추할 수 있도록)
+        // 7. 띄어쓰기 표현 방법(개발 클래스명과 css 클래스명을 구분시켜야한다)
+        //    1) snake case : my_first_var (css의 클래스와 헷갈릴 수 있음)
+        //    2) camel case : myFirstVar (이 방법을 더 많이 사용)
+
+        var abc = "가나다라";
+        // 변수는 한 번에 하나의 데이터만 저장이 가능
+        console.log(abc);
+        abc = "데이터를바꾼다";
+        console.log(abc);
+
+        // let, const (ES6버전)
+        let b = 123;
+            b = "새로운 데이터"; // 가능(바꿀 수 있는 변수)
+        console.log(b);
+        const c = 123;
+            c = "새로운 데이터"; // 불가능(바꿀 수 없는 변수)
+        console.log(c);
+
+    </script>
+</body>
+</html>

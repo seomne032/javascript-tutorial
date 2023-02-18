@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="clock"></div>
+    <script>
+        function clock() {
+            // let a = new Array; // 새로운 array 생성
+            // let a = new String; // 새로운 string 생성 
+            // console.log(a);
+
+            let now = new Date();
+            let year = now.getFullYear(); // 년도를 가져온다
+            let month = now.getMonth(); // 월을 가져온다
+            let _date = now.getDate(); // 일을 가져온다
+            let day = now.getDay(); // 요일을 가져온다
+            let hour = now.getHours(); // 시간을 가져온다
+            let min = now.getMinutes(); // 분을 가져온다
+            let sec = now.getSeconds(); // 초를 가져온다
+            // console.log(year, month, _date, day, hour, min, sec);
+
+            // 2023년 2월 12일 일요일 00시 00분 00초 가 나오도록 만들기!
+            const week = ["일", "월", "화", "수", "목", "금", "토"];
+            // 24시간제 -> 12시간제로 출력되게
+            if (hour > 12) {
+                hour = hour - 12;
+            }
+            // 시,분,초가 한 자릿수로 출력 될 경우 -> 두자릿수로 출력되게
+            if (hour < 10) {
+                hour = "0" + hour
+            }
+            if (min < 10) {
+                min = "0" + min
+            }
+            if (sec < 10) {
+                sec = "0" + sec
+            }
+            //document.write(`${year}년 ${month + 1}월 ${_date}일 ${week[day]}요일 ${hour}시 ${min}분 ${sec}초 <br>`);
+            document.querySelector(".clock").innerText = `${year}년 ${month + 1}월 ${_date}일 ${week[day]}요일 ${hour}시 ${min}분 ${sec}초`;
+        } //funtionc fin (1초마다 실시간으로 바뀌는 시간)
+
+        // 자동으로 반복 실행
+        setInterval(clock, 500); // 1초마다 실행한다
+        clock(); // 페이지가 로드되자 마자 시작된다!(이렇게 안하면 첫 시작때 흰화면이 뜬다)
+    </script>
+</body>
+
+</html>

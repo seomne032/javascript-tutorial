@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체(object) : 데이터를 이름(key)으로 관리하는 방법
+        let me = {
+            // 키 : 값
+            name : '은혜',
+            age : 20,
+            isHandsome : true,
+            favFoods : ['피자', '돈까스', '햄버거'],
+            myFam : {
+                father : {
+                    name : '아빠',
+                    age : 50,
+                },
+                mother : {},
+                sister : {}
+            },
+            sayHello : function(who) {
+                alert(who + '님, 안녕하세요');
+            }
+        }
+        console.log(me.favFoods[0]);
+        me.sayHello("철수"); // me 안의 sayHello를 실행시킨다 실행시킬 내용은 () 이것이다
+        console.log(); // console 안의 log를 실행시킨다 실행시킬 내용은 () 이것이다
+        document.write(); // document 안의 write 를 실행시킨다 실행시킬 내용은 () 이것이다
+    </script>
+</body>
+</html>

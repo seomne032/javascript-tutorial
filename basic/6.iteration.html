@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 반복문(iteration flow) - for문
+        // 조건식이 거짓으로 판별될 때까지 코드를 반복실행시키는 구문
+        // 조건식이 참일 때마다 반복실행시키는 구문
+        /*
+            for(초기식; 조건식; 증감식) {
+                조건식이 참일 때마다 실행 될 실행 구문
+            }
+        */
+
+        // document.write("1. 안녕하세요, 서은혜입니다<hr>");
+        // document.write("2. 안녕하세요, 서은혜입니다<hr>");
+        // document.write("3. 안녕하세요, 서은혜입니다<hr>");
+        // document.write("4. 안녕하세요, 서은혜입니다<hr>");
+        // document.write("5. 안녕하세요, 서은혜입니다<hr>");
+        // for (let i = 1; i <= 100; i++) {
+        //     document.write(i + ". 안녕하세요, 서은혜입니다.<hr>")
+        // }
+
+        const myName = "내이름";
+        for (let i = 2; i <= 100; i+=2) {
+            // document.write(i + ". 안녕하세요, 서은혜입니다.<hr>")
+
+            // 템플릿 리터럴(ES6)
+            // `` : 벡틱기호
+            document.write(`${i}. 안녕하세요, ${myName}입니다.<hr>`);
+        }
+
+        // for (let i = 1; i <= 50; i++) {
+        //     document.write(i * 2 + ". 안녕하세요, 서은혜입니다.<hr>")
+        // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 데이터의 형태        
+        let str = "안녕하세요"; // 문자형 데이터(string)
+        let num = 123; // 숫자형 데이터(number)
+        let bln = true; // 논리형 데이터(boolean): 참(true)/거짓(false)만 존재
+        let non = null; // null data(널): 빈 값(내가 의도적으로 비우는 값)
+        let non2; // undefined(정의할 수 없는 값, 의도되지 않은 자연적으로 생기는 상태)
+        // NaN : 연산오류(Not a Number)
+        console.log(str, num, bln, non, non2);
+
+        // 데이터의 형 변환
+        let data1 = "123";
+        // 데이텉 형태 검사
+        // typeof(); : 데이터의 형태를 검사한 다음 결과 값을 리턴해줌
+        console.log(typeof(data1));
+
+        data1 = Number(data1); // 숫자로 변환해주는 함수: data1을 숫자로 변환해줘!
+        console.log(typeof(data1));
+    </script>
+</body>
+</html>
