@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <h1>logo</h1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Accusantium laborum adipisci, veniam dicta earum cumque?
+                </p>
+                <span>seomne@javascript.com</span>
+            </div>
+            <div class="right">
+                <div class="inner">
+                    <h2>메일 보내기</h2>
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number" />
+                        <input
+                            type="hidden"
+                            name="subject"
+                            value="안녕하세요👋"
+                        />
+                        <lable>이름</lable>
+                        <input
+                            type="text"
+                            name="name"
+                            id="userName"
+                            placeholder="이름을 입력해주세요"
+                        />
+
+                        <lable>이메일</lable>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="이메일을 입력해주세요"
+                        />
+                        <lable>내용</lable>
+                        <textarea
+                            name="message"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                            placeholder="보내실 내용을 입력해주세요"
+                        ></textarea>
+                        <button type="submit" value="Send">보내기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="dimm"><i class="xi-spinner-5 xi-spin xi-3x"></i></div>
+        <div class="modal">
+            <span>🙌</span>
+            <p>메일이 성공적으로<br />발송되었습니다</p>
+            <button class="close_btn">닫기</button>
+        </div>
+
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        ></script>
+        <script>
+            (function () {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('y1-QMrZ-oRn1dbV_9');
+            })(); //자동실행함수
+        </script>
+        <script src="./app.js"></script>
+    </body>
+</html>
